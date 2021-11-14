@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "e4ed2acd-fdd9-4e1b-84ee-cb88ab53e417",
+		"name": "SupermarketAPI Postman Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44339/api/categories",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCategory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "TestCategory",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44339/api/categories",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCategory",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44339/api/categories?name=TestCategory",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "TestCategory"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44339/api/product",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44339/api/product/add/?name=Pencil&cost=1.23&newCategory=TestCategory",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"product",
+						"add",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Pencil"
+						},
+						{
+							"key": "cost",
+							"value": "1.23"
+						},
+						{
+							"key": "newCategory",
+							"value": "TestCategory"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44339/api/product/update/?oldName=Pencil&cost=4.56&newCategory=RandomStuff&newName=Pen",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"product",
+						"update",
+						""
+					],
+					"query": [
+						{
+							"key": "oldName",
+							"value": "Pencil"
+						},
+						{
+							"key": "cost",
+							"value": "4.56"
+						},
+						{
+							"key": "newCategory",
+							"value": "RandomStuff"
+						},
+						{
+							"key": "newName",
+							"value": "Pen"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44339/api/product/?name=Pen",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"product",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Pen"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
