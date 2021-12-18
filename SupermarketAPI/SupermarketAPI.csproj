@@ -10,9 +10,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\test\Common\Common.csproj" />
     <ProjectReference Include="..\CoreDomain\CoreDomain.csproj" />
     <ProjectReference Include="..\SqlRepositories\SqlDAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Common">
+      <HintPath>..\Common\bin\Debug\netcoreapp3.1\Common.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 
